@@ -6,3 +6,4 @@ clouds_data
 labeled_clouds
 labeled_planes
 planes_no_repeat
+*.keras

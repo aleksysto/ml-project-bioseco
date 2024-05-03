@@ -36,8 +36,8 @@ while not_clouds_count < not_clouds_test_dataset_count:
     label = file.split(".")[0]
     if label == "not_cloud":
         shutil.move(f"../clouds_data/{file}", f"../clouds_data/test/{file}")
+        not_clouds_count += 1
     index += 1
-    not_clouds_count += 1
 
 index = 0
 while clouds_count < clouds_test_dataset_count:
@@ -45,10 +45,22 @@ while clouds_count < clouds_test_dataset_count:
     label = file.split(".")[0]
     if label == "cloud":
         shutil.move(f"../clouds_data/{file}", f"../clouds_data/test/{file}")
+        clouds_count += 1
     index += 1
-    clouds_count += 1
 
 for file in os.listdir("../clouds_data/"):
     if file == "test" or file == "train":
         continue
     shutil.move(f"../clouds_data/{file}", f"../clouds_data/train/{file}")
+
+for file in os.listdir("../clouds_data/train/"):
+    if file == "cloud" or file == "not_cloud":
+        continue
+    filename = file.split(".")[0]
+    shutil.move(f"../clouds_data/train/{file}", f"../clouds_data/train/{filename}/{file}")
+
+for file in os.listdir("../clouds_data/test/"):
+    if file == "cloud" or file == "not_cloud":
+        continue
+    filename = file.split(".")[0]
+    shutil.move(f"../clouds_data/test/{file}", f"../clouds_data/test/{filename}/{file}")
