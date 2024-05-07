@@ -1,9 +1,13 @@
 planes_assign
+old_models
 clouds_confirm
 all_clouds
+new_data_models
+./PlanesClassification/trained*
 all_planes
 clouds_data
 labeled_clouds
 labeled_planes
 planes_no_repeat
+planes_data
 *.keras

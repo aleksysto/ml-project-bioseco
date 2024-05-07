@@ -6,15 +6,7 @@ from sklearn.metrics import confusion_matrix
 import seaborn as sns
 import random as r
 
-FAST_RUN = False
-IMAGE_WIDTH = 200
-IMAGE_HEIGHT = 200
-IMAGE_SIZE = (IMAGE_WIDTH, IMAGE_HEIGHT)
-IMAGE_CHANNELS = 3
-epochs = 1
-
-
-model = load_model("./second_try_cloudsVSnotclouds.keras")
+model = load_model("./66_final_clouds.keras")
 
 image_size = (100, 100)
 batch_size = 128
@@ -27,7 +19,7 @@ test1_it, test_it = keras.utils.image_dataset_from_directory(
         image_size=image_size,
         batch_size=batch_size,
         )
-print(test_it)
+
 labels = np.concatenate([y for x, y in test_it], axis=0)
 predictions = model.predict(test_it, steps=len(test_it))
 predict_labels = []
@@ -50,4 +42,3 @@ plt.xlabel('Predicted')
 plt.ylabel('True')
 plt.title('Confusion Matrix')
 plt.show()
-
