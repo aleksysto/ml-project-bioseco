@@ -1,4 +1,3 @@
-from tensorflow.keras.models import load_model
 import keras
 import PIL
 import PIL.Image

@@ -1,5 +1,3 @@
-import os
-import numpy as np
 import keras
 from keras import layers
 from tensorflow import data as tf_data
@@ -102,7 +100,10 @@ loss = keras.losses.BinaryCrossentropy(from_logits=True)
 metrics = ["accuracy"]
 
 model.compile(optimizer=optimizer, loss=loss, metrics=metrics)
-history = model.fit(train_ds, epochs=epochs, callbacks=callbacks, validation_data=val_ds)
+history = model.fit(train_ds,
+                    epochs=epochs,
+                    callbacks=callbacks,
+                    validation_data=val_ds)
 
 # model.save("first_try_cloudsVSnotclouds.keras")
 # Plotting training and validation accuracy

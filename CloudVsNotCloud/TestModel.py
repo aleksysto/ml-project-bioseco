@@ -36,6 +36,17 @@ print(predict_labels)
 
 # Confusion matrix
 cm = confusion_matrix(labels, predict_labels)
+print(cm)
+goodsum = 0
+wholesum = 0
+goodidx = 0
+for arr in cm:
+    goodsum += arr[goodidx]
+    goodidx += 1
+    for elem in arr:
+        wholesum += elem
+
+print("Accuracy from confusion matrix: ", goodsum/wholesum)
 plt.figure(figsize=(10, 7))
 sns.heatmap(cm, annot=True, fmt='d', cmap='Blues')
 plt.xlabel('Predicted')

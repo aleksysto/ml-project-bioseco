@@ -1,5 +1,4 @@
 import os
-import random as r
 files = os.listdir("../planes_data/plane_with_trail/")
 
 #while len(files) > 4500:

@@ -38,7 +38,10 @@ class JPEG:
 
 
 bads = []
-images = ["../clouds_data/test/not_cloud/", "../clouds_data/test/cloud/", "../clouds_data/train/cloud/", "../clouds_data/train/not_cloud/"]
+images = ["../clouds_data/test/not_cloud/",
+          "../clouds_data/test/cloud/",
+          "../clouds_data/train/cloud/",
+          "../clouds_data/train/not_cloud/"]
 
 for path in images:
     for img in tqdm(os.listdir(path)):

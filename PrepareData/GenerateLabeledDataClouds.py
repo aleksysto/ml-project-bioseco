@@ -17,10 +17,8 @@ def check_for_element_cloud(array, name, cloud, not_cloud):
 
 
 clouds_dirs = os.listdir("../clouds_confirm/")
-planes_dirs = os.listdir("../planes_assign/")
 
 clouds_files = []
-planes_files = []
 
 for dir in clouds_dirs:
     files = os.listdir(f"../clouds_confirm/{dir}")

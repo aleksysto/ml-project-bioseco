@@ -1,7 +1,4 @@
 import os
-import pandas as pd
-import numpy as np
-import shutil
 import matplotlib.pyplot as plt
 
 classes = {"cloud": 0,

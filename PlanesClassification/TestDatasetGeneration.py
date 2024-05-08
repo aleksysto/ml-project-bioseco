@@ -29,6 +29,7 @@ def data_augmentation(images):
         images = layer(images)
     return images
 
+
 not_plane = []
 plane_common = []
 plane_large = []

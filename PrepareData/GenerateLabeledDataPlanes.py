@@ -92,11 +92,3 @@ for arr in planes_array:
     ind += 1
 print(df)
 df.to_csv("./planes.csv", sep=",")
-
-# wrzucic z planes_assign do cloudow
-# dla planes klasa wielokolumnowa i procenty
-# jako dane wejsciowe id_plane_bird.
-# CSV z id/nazwapliku i kolumny
-# na wyjsciu 8 neuronow
-# warto zrobic eksperyment dla rekordow gdzie jedna osoba oznaczala bo moga byc gorsze niz jak wiele osob
-#
